@@ -1,18 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
 font-family: "Press Start 2P";
 background-color: #A3B0FF; 
+margin: 0;
 }
 
 .banner {
-  background-color: #230c2e;
-  position: sticky;
-  top: 0;
-  
-
+    position: sticky;
+    top: 0;
+    padding-bottom: 24px;
+    background: url(../src/img/fondopokemon.png) center center no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    z-index: 1;
 }
+
+.img-title {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  position: center;
+  margin: 0 auto;
+  padding-top: 12px;
+  padding-bottom: 32px;
+}
+
+.btn-filter {
+  background-color: #586CDD;
+  font-family: 'Press Start 2P';
+  color: white;
+  padding: 20px;
+  font-size: 12px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: 1px solid black;
+}
+
+.despliegue {
+  position: relative;
+  display: inline;
+  padding-inline-start: 8%;
+}
+
+.despliegue-contenido {
+  display: none;
+  position: absolute;
+  background-color: #f5f10c;
+  min-width: 160px;
+}
+
+.despliegue-contenido a {
+  margin: 5px;
+  padding: 3px;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.despliegue-contenido a:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
 .tarjeta {
     background-image: url(../src/img/fondo_tarjeta.png);
     border: 3px solid #7c7c7c;
@@ -35,33 +89,4 @@ background-color: #A3B0FF;
     width: 100px;
     height: 100px;
     margin-bottom: 5px;
-  }
-  
-  @media screen and (min-width: 800px) {
-
-    .banner {
-        .header {
-            background-color: #230c2e;
-            position: sticky;
-            top: 0;
-            padding-bottom: 100px;
-            background: url(../src/img/fondo_tarjeta.png);
-            background-size: cover;
-            background-repeat: repeat-x;
-            justify-content: space-between;
-            content: 1rem;
-            z-index: 1;
-          }
-          
-          .img-go {
-            max-width: 880px;
-            max-height:70%;
-            height: 200px;
-            display: block;
-            margin: 0 auto;
-          }
-  
-}
-
-
   }
