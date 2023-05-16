@@ -15,7 +15,7 @@ data.pokemon.forEach(pokemon =>{
     <div class="back tarjeta" >
         <p> Ataque:<br> ${pokemon.stats["base-attack"]}
         <br>Defensa:<br> ${pokemon.stats["base-defense"]} 
-        <br>Resisencia:<br> ${pokemon.stats["base-stamina"]} 
+        <br>Resistencia:<br> ${pokemon.stats["base-stamina"]} 
         <br>Max-cp:<br> ${pokemon.stats["max-cp"]}
         <br>Max-hp:<br> ${pokemon.stats["max-hp"]}</p>
     </div>
