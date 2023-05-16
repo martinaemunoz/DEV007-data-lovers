@@ -4,14 +4,16 @@
 body {
 font-family: "Press Start 2P";
 background-color: #A3B0FF; 
+margin: 0;
+padding: 0;
 }
 
 .banner {
   background-color: #230c2e;
   position: sticky;
   top: 0;
-  
-
+  background-image: url(../src/img/fondopokemon.png);
+  height: 200px;
 }
 .tarjeta {
     background-image: url(../src/img/fondo_tarjeta.png);
