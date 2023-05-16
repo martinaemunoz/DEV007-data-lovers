@@ -1,43 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
 
 body {
-font-family: "Press Start 2P";
-background-color: #A3B0FF; 
+font-family: "Consolas";
+background-color: #A3B0FF;
+margin: 0%; 
 }
 
 .banner {
-  background-color: #230c2e;
+  background-color: #9ccff8;
   position: sticky;
   top: 0;
+  padding-bottom: 250px;
+  background: url(../src/img/fondopokemon.png) center center no-repeat;
+  background-size: cover;
+  justify-content: space-between;
+  z-index: 1;
+
   
 
 }
-.tarjeta {
-    background-image: url(../src/img/fondo_tarjeta.png);
-    border: 3px solid #7c7c7c;
-    border-radius: 10px;
-    padding: 48px;
-    margin-bottom: 50px;
-    margin-left: 70px;
-    display: inline-block;
-    width: 100px;
-    text-align: center;
-    font-size: 10px;
-    left: 100%;
+
+#contenedor {
+  display: flex;
+  justify-content: center;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+  gap: 5%;
+  z-index: 0;
+  
+}
+.front,
+.back {
+  border-width: 10px;
+  padding: 10px;
+  border: 6px double #230c2e;
+  margin: 30px 20px;
+  border-radius: 20px;
+  gap: 15px;
+  text-align: center;
+  align-items: center;
+  margin-right: 30px;
+  height: 40vh;
+  background: url(../src/img/fondo_tarjeta.png);
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+
+.front h2 {
+  margin: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: #230c2e;
+}
+.front img {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+  
+.card div {
+  display: flex;
+  backface-visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.1, 0.22, 0.8, 1.13);
+}
+
+.card .front {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  transform: perspective(200px) rotateY(0deg);
+}
+
+  .card .back {
+    width: 20vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform: perspective(200px) rotateY(180deg);
+  }
+  .card:hover .front {
+    width: 20vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform: perspective(500px) rotateY(180deg);
   }
   
-  .tarjeta h2 {
-    margin: 5px 0;
+  .front.tarjeta {
+    position: absolute;
   }
-  
-  .tarjeta img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 5px;
+  .back.tarjeta{
+    font-size: 20px;
   }
-  
-  @media screen and (min-width: 800px) {
+  .card:hover .back {
+    width: 20vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform: perspective(100px) rotateY(360deg);
+  }
+  .about {
+    max-width: 100%;
+    text-align: justify;
+    padding: 10px;
+    font-size: 12px;
+    color: black;
+  }
+  /*@media screen and (min-width: 800px) {
 
     .banner {
         .header {
@@ -53,13 +123,7 @@ background-color: #A3B0FF;
             z-index: 1;
           }
           
-          .img-go {
-            max-width: 880px;
-            max-height:70%;
-            height: 200px;
-            display: block;
-            margin: 0 auto;
-          }
+          
   
 }
 
