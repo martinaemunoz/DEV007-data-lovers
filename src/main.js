@@ -8,9 +8,8 @@ data.pokemon.forEach(pokemon =>{
   contenedor.innerHTML += `
   <div class="card">
     <div class="front tarjeta">
-    
-    <h2>#${pokemon.num}<br>${pokemon.name.toUpperCase()}</h2>
     <img class="imagenPokemon" src=${pokemon.img}>
+    <h2>#${pokemon.num}<br>${pokemon.name.toUpperCase()}</h2>
   </div>
     <div class="back tarjeta" >
         <p> Ataque:<br> ${pokemon.stats["base-attack"]}
