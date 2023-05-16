@@ -7,11 +7,42 @@
   </head>
   <body>
     <header class="banner">
+      <div>
+        <img class="img-title" src="../src/img/pokedex.png" alt=""/>
+      </div>
+      <div class="despliegue" id="menu-filtrar">
+        <button class="btn-filter" id="btn-filter" data-target="dropdown-content-filtrar">filtrar por tipo</button>
+        <div class="despliegue-contenido" id="despliegue-contenido-filtrar">
+          <div class="menu-tipos">
+            <li>
+              <a href="#" name="todos" class="tipoPokemon">Todos los tipos</a>
+            </li>
+            <li><a href="#" name="water" class="tipoPokemon">Agua</a></li>
+            <li><a href="#" name="fire" class="tipoPokemon">Fuego</a></li>
+            <li><a href="#" name="grass" class="tipoPokemon">Planta</a></li>
+            <li><a href="#" name="ground" class="tipoPokemon">Tierra</a></li>
+            <li><a href="#" name="rock" class="tipoPokemon">Roca</a></li>
+            <li><a href="#" name="steel" class="tipoPokemon">Metal</a></li>
+            <li><a href="#" name="ice" class="tipoPokemon">Hielo</a></li>
+            <li><a href="#" name="electric" class="tipoPokemon">Eléctrico</a></li>
+            <li><a href="#" name="dragon" class="tipoPokemon">Dragon</a></li>
+            <li><a href="#" name="ghost" class="tipoPokemon">Fantasma</a></li>
+            <li><a href="#" name="psychic" class="tipoPokemon">Psiquico</a></li>
+            <li><a href="#" name="normal" class="tipoPokemon">Normal</a></li>
+            <li><a href="#" name="fighting" class="tipoPokemon">Lucha</a></li>
+            <li><a href="#" name="poison" class="tipoPokemon">Veneno</a></li>
+            <li><a href="#" name="bug" class="tipoPokemon">Insecto</a></li>
+            <li><a href="#" name="flying" class="tipoPokemon">Volador</a></li>
+            <li><a href="#" name="dark" class="tipoPokemon">Oscuro</a></li>
+            <li><a href="#" name="fairy" class="tipoPokemon">Hada</a></li>
+          </div>
+        </div>
+      </div>
     </header>
     <body>
-      <h2  class="contenedor"    id="contenedor"></h2>
-    <div id="root"></div>
+      <h2  id="contenedor"></h2>
+      <div id="root"></div>
+
     <script src="main.js" type="module" ></script>
-  
   </body>
 </html>
