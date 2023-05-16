@@ -81,10 +81,10 @@ margin: 0;
 .back {
   border-width: 10px;
   padding: 10px;
-  border: 6px double #230c2e;
+  border: 3px solid #F0DC24;
   margin: 30px 20px;
   border-radius: 20px;
-  gap: 15px;
+  gap: 16px;
   text-align: center;
   align-items: center;
   margin-right: 30px;
@@ -98,7 +98,7 @@ margin: 0;
 .front h2 {
   margin: 5px;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   color: #230c2e;
 }
 
@@ -139,7 +139,11 @@ margin: 0;
   position: absolute;
 }
 .back.tarjeta{
-  font-size: 20px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 2.2;
+  background: url(../src/img/fondo_amarillo.png);
+ 
 }
 .card:hover .back {
   width: 20vh;
