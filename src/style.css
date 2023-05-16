@@ -18,12 +18,12 @@ margin: 0;
 
 .img-title {
   display: flex;
-  justify-content: center;
-  max-width: 400px;
+  max-width: 280px;
   position: center;
-  margin: 0 auto;
+  margin: auto;
   padding-top: 12px;
   padding-bottom: 32px;
+  padding-right: 1200px;
 }
 
 .btn-filter {
@@ -32,7 +32,7 @@ margin: 0;
   color: white;
   padding: 20px;
   font-size: 12px;
-  margin: 10px;
+  margin-left: auto;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -41,9 +41,10 @@ margin: 0;
 }
 
 .despliegue {
-  position: relative;
+  position: absolute;
   display: inline;
-  padding-inline-start: 8%;
+  padding-inline-start: 30%;
+  top: 20%;
 }
 
 .despliegue-contenido {
