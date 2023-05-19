@@ -19,11 +19,11 @@ margin: 0;
 .img-title {
   display: flex;
   max-width: 280px;
-  position: center;
+  position: sticky;
   margin: auto;
   padding-top: 12px;
   padding-bottom: 32px;
-  padding-right: 1200px;
+  padding-right: 80%;
 }
 
 .btn-filter {
@@ -50,7 +50,7 @@ margin: 0;
 .despliegue-contenido {
   display: none;
   position: absolute;
-  background-color: #f5f10c;
+  background-color: #F0DC24;
   min-width: 160px;
 }
 
@@ -68,6 +68,32 @@ margin: 0;
   color: black;
 }
 
+.despliegue:hover .despliegue-contenido {
+  display: block;
+  position: absolute;
+  top: 100%;
+  border-radius: 15px;
+  background-color: #4757b0;
+  column-count: 2;
+}
+
+.despliegue:hover .btn-filter {
+  background-color: #F0DC24 ;
+  color: black;
+}
+
+.menu-tipos {
+  list-style: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:focus-within {
+  color: goldenrod;
+  font-weight: bold;
+}
 
 .contenedor {
   display: flex;
