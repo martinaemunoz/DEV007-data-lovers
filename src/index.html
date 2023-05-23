@@ -10,6 +10,16 @@
       <div>
         <img class="img-title" src="../src/img/pokedex.png" alt=""/>
       </div>
+      <div class="botones">
+        <div class="buscar" id="input-buscar">
+          <img class="input" src="b2 .png" alt="" />
+          <input
+            type="text"
+            id="inputBuscar"
+            placeholder="Buscar por nombre"
+            required
+          />
+        </div>
       <div class="despliegue" id="menu-filtrar">
         <button class="btn-filter" id="btn-filter" data-target="dropdown-content-filtrar">filtrar por tipo</button>
         <div class="despliegue-contenido" id="despliegue-contenido-filtrar">
@@ -37,7 +47,7 @@
         </div>
       </div>
       <div class="despliegue" id="menu-ordenar">
-        <button class="btn-ordenar" id="btn-ordenar" data-target="dropdown-content-ordenar">ordenar por nombre</button>
+        <button class="btn-filter" id="btn-ordenar" data-target="dropdown-content-ordenar">ordenar por nombre</button>
         <div class="despliegue-contenido" id="despliegue-contenido-ordenar">
           <a href="#" name="todos" class="Ordenar">Sin ordenar</a>
           <a href="#" name="AZ" class="Ordenar">Orden de A-Z</a>
