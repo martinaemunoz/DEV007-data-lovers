@@ -11,7 +11,7 @@ function crearTarjetas(data){
           <img class="imagenPokemon" src=${pokemon.img}>
           <h2>#${pokemon.num}<br>${pokemon.name.toUpperCase()}</h2>
         </div>
-          <div class="back tarjeta" >
+          <div class="back tarjeta">
               <p> Ataque:<br> ${pokemon.stats["base-attack"]}
               <br>Defensa:<br> ${pokemon.stats["base-defense"]} 
               <br>Resistencia:<br> ${pokemon.stats["base-stamina"]} 
@@ -19,36 +19,28 @@ function crearTarjetas(data){
               <br>Max-hp:<br> ${pokemon.stats["max-hp"]}</p>
           </div>
         </div>`
-      })
+    })
 }
 /*console.log(data.pokemon);*/
 
 crearTarjetas(pokemon);
 
 const despliegueBoton = document.querySelectorAll('.tipoPokemon');
-/*console.log(despliegueBoton)
-despliegueBoton.addEventListener('click', () => {
-    //console.log('existe');
-})*/
 despliegueBoton.forEach((boton) => {
-  const dropdownContent = document.getElementById(boton.dataset.target);
-  //const opciones = dropdownContent.querySelectorAll('a');
-  //boton.forEach((opcion) => {
+const dropdownContent = document.getElementById(boton.dataset.target);
+
 const seleccion = boton.getAttribute('name');
 boton.addEventListener('click', (event) => {
     event.preventDefault();
-    //console.log(pokemon, seleccion);
+    if (boton.name === "todos") {
+        contenedor.innerHTML = "";
+        crearTarjetas(pokemon);
+    } else {
     const filtrado = filtrarTipos(pokemon, seleccion);
-    console.log(filtrado)
+    console.log(filtrado);
     contenedor.innerHTML = "";
     crearTarjetas(filtrado.pokemon);
-      //button.textContent = opcion.textContent.toUpperCase();
+    }
     });
-    /*opcion.textContent = opcion.textContent.toUpperCase();
-  });
-  //filtrarTipos(pokemon, dropdownContent)
-  //console.log(filtrarTipos(pokemon, dropdownContent))
-  //console.log(dropdownContent);*/
 });
-
 //const tipoPokemon = document.getElementsByClassName("tipoPokemon");
