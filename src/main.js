@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import filtrarTipos from './data.js';
+import { filtrarTipos, ordenarPokemon } from './data.js';
 
 const pokemon = data.pokemon;
 let contenedor = document.getElementById('contenedor');
@@ -44,3 +44,7 @@ boton.addEventListener('click', (event) => {
     });
 });
 //const tipoPokemon = document.getElementsByClassName("tipoPokemon");
+
+const orderedPokemon = ordenarPokemon(pokemon, orderType);
+const selectElement = document.getElementById("ordenar-select");
+const pokemonContainer = document.getElementById("pokemon-container");
