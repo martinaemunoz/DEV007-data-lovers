@@ -7,18 +7,16 @@ export const filtrarTipos = (data, tipo) => {
   return { pokemon: dataFiltrada };
 };
 
-export function ordenarPokemon (data, order) {
-  const orderedPokemon = data.sort(function(a, b) {
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (order === "AZ") {
-      if (nameA < nameB) return -1;
-      if (nameA > nameB) return 1;
-    } else if (order === "ZA") {
-      if (nameA > nameB) return -1;
-      if (nameA < nameB) return 1;
-    }
-    return 0;
-  });
-}
 
+   
+ export function array(data, orden) {
+  const copiedData = [...data.pokemon]; // Crear una copia del array original
+
+  if (orden === "AZ") {
+    copiedData.sort((a, b) => a.name.localeCompare(b.name)); // Orden ascendente (de A a Z)
+  } else if (orden === "ZA") {
+    copiedData.sort((a, b) => b.name.localeCompare(a.name)); // Orden descendente (de Z a A)
+  }
+
+  return copiedData;
+}

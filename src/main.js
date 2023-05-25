@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarTipos, ordenarPokemon } from './data.js';
+import { filtrarTipos, array } from './data.js';
 
 const pokemon = data.pokemon;
 let contenedor = document.getElementById('contenedor');
@@ -45,6 +45,49 @@ boton.addEventListener('click', (event) => {
 });
 //const tipoPokemon = document.getElementsByClassName("tipoPokemon");
 
-const orderedPokemon = ordenarPokemon(pokemon, orderType);
-const selectElement = document.getElementById("ordenar-select");
-const pokemonContainer = document.getElementById("pokemon-container");
+
+const Ordenar = document.getElementsByClassName("Ordenar")
+
+for (const item of Ordenar) {
+  item.addEventListener("click", () => {
+    if (item.name === "todos") {
+      contenedor.innerHTML = "";
+      crearTarjetas(pokemon);
+    }
+    if (item.name === "AZ") {
+      const SortData = array (data, item.name);
+      contenedor.innerHTML = "";
+      crearTarjetas(SortData);
+    } else if (item.name === "ZA") {
+      const SortData = array(data, item.name);
+      contenedor.innerHTML = "";
+      crearTarjetas(SortData);
+    }
+  });
+}
+
+const arrayTypes = [
+  "psychic",
+  "ground",
+  "water",
+  "fighting",
+  "normal",
+  "ghost",
+  "grass",
+  "poison",
+  "flying",
+  "dark",
+  "fairy",
+  "dragon",
+  "rock",
+  "steel",
+  "ice",
+  "electric",
+];
+const arrayTotalTypes = [];
+ arrayTypes.forEach((type) => {
+  arrayTotalTypes.push({
+    type: type,
+    total: filtrarTipos(data, arrayTypes[index]).pokemon.length / 100,
+  });
+ });
