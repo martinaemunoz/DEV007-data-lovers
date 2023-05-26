@@ -25,7 +25,6 @@ export function ordenarPokemon(data, orden) {
 export function buscarPorNombre(data, nombreBuscar) {
   const withoutSpaces = nombreBuscar.trim();
   const dataFiltrada = data.filter((pokemon) => 
-  pokemon.name.startsWith(withoutSpaces)
-  );
+    pokemon.name.startsWith(withoutSpaces))
   return { pokemon: dataFiltrada };
 }

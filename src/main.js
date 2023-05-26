@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarTipos, ordenarPokemon, buscarPorNombre} from './data.js';
+import { filtrarTipos, ordenarPokemon, buscarPorNombre } from './data.js';
 
 const pokemon = data.pokemon;
 const contenedor = document.getElementById('contenedor');

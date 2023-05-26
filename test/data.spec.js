@@ -1,4 +1,4 @@
-import { filtrarTipos } from '../src/data.js';
+import { filtrarTipos, ordenarPokemon } from '../src/data.js';
 
 const data = {
   pokemon: [
@@ -76,9 +76,18 @@ describe('filtrarTipos', () => {
     expect(typeof filtrarTipos).toBe('function');
   })
 
-  it('Filtra y devuelve a los tipos de pokemon.', () => {
+  it('Filtra y devuelve a un tipo como objeto.', () => {
     expect(typeof filtrarTipos(data.pokemon, "grass")).toBe("object");
   })
 });
 
+describe('ordenarPokemon', () => {
+  test('Debería ser una función.', () => {
+    expect(typeof ordenarPokemon).toBe('function');
+  })
+
+  it('ordenarPokemon devuelve un objeto.', () => {
+    expect(typeof ordenarPokemon(data)).toBe("object");
+  })
+})
 
