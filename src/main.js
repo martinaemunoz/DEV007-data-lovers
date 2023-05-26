@@ -1,11 +1,11 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarTipos, array } from './data.js';
+import { filtrarTipos, ordenarPokemon, buscarPorNombre} from './data.js';
 
 const pokemon = data.pokemon;
-let contenedor = document.getElementById('contenedor');
+const contenedor = document.getElementById('contenedor');
 function crearTarjetas(data){
-    data.forEach(pokemon =>{
-        contenedor.innerHTML += `
+  data.forEach(pokemon =>{
+    contenedor.innerHTML += `
         <div class="card">
           <div class="front tarjeta">
           <img class="imagenPokemon" src=${pokemon.img}>
@@ -19,7 +19,7 @@ function crearTarjetas(data){
               <br>Max-hp:<br> ${pokemon.stats["max-hp"]}</p>
           </div>
         </div>`
-    })
+  })
 }
 /*console.log(data.pokemon);*/
 
@@ -27,21 +27,17 @@ crearTarjetas(pokemon);
 
 const despliegueBoton = document.querySelectorAll('.tipoPokemon');
 despliegueBoton.forEach((boton) => {
-const dropdownContent = document.getElementById(boton.dataset.target);
-
-const seleccion = boton.getAttribute('name');
-boton.addEventListener('click', (event) => {
+  const seleccion = boton.getAttribute('name');
+  boton.addEventListener('click', (event) => {
     event.preventDefault();
     if (boton.name === "todos") {
-        contenedor.innerHTML = "";
-        crearTarjetas(pokemon);
+      contenedor.innerHTML = "";
     } else {
-    const filtrado = filtrarTipos(pokemon, seleccion);
-    console.log(filtrado);
-    contenedor.innerHTML = "";
-    crearTarjetas(filtrado.pokemon);
+      const filtrado = filtrarTipos(pokemon, seleccion);
+      contenedor.innerHTML = "";
+      crearTarjetas(filtrado.pokemon);
     }
-    });
+  });
 });
 //const tipoPokemon = document.getElementsByClassName("tipoPokemon");
 
@@ -55,39 +51,26 @@ for (const item of Ordenar) {
       crearTarjetas(pokemon);
     }
     if (item.name === "AZ") {
-      const SortData = array (data, item.name);
+      const SortData = ordenarPokemon(data, item.name);
       contenedor.innerHTML = "";
       crearTarjetas(SortData);
     } else if (item.name === "ZA") {
-      const SortData = array(data, item.name);
+      const SortData = ordenarPokemon(data, item.name);
       contenedor.innerHTML = "";
       crearTarjetas(SortData);
     }
   });
 }
 
-const arrayTypes = [
-  "psychic",
-  "ground",
-  "water",
-  "fighting",
-  "normal",
-  "ghost",
-  "grass",
-  "poison",
-  "flying",
-  "dark",
-  "fairy",
-  "dragon",
-  "rock",
-  "steel",
-  "ice",
-  "electric",
-];
-const arrayTotalTypes = [];
- arrayTypes.forEach((type) => {
-  arrayTotalTypes.push({
-    type: type,
-    total: filtrarTipos(data, arrayTypes[index]).pokemon.length / 100,
-  });
- });
+const inputBuscar = document.getElementById("inputBuscar");
+inputBuscar.addEventListener("input", function () {
+  const nombreBuscar = inputBuscar.value.trim().substring(0, 3);
+  const filtroNombre = buscarPorNombre(pokemon, nombreBuscar);
+  
+  if (filtroNombre.pokemon.length === 0) {
+    alert("No se encontraron resultados");
+  }
+  
+  contenedor.innerHTML ="";
+  crearTarjetas(filtroNombre.pokemon);
+});
