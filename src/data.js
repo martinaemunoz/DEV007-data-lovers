@@ -1,14 +1,15 @@
-// estas funciones son de ejemplo
+// estas funciones es para filtar
 
 export function filtrarTipos(data, tipo) {
   const dataFiltrada = data.filter((pokemon) =>
+  
     pokemon.type.includes(tipo)
   );
   return { pokemon: dataFiltrada };
 }
 
 
-   
+   // estas funciones es para ordenar
 export function ordenarPokemon(data, orden) {
   const copiedData = [...data.pokemon]; // Crear una copia del array original
 

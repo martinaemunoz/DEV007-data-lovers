@@ -21,7 +21,7 @@ function crearTarjetas(data){
         </div>`
   })
 }
-/*console.log(data.pokemon);*/
+
 
 crearTarjetas(pokemon);
 
@@ -73,4 +73,56 @@ inputBuscar.addEventListener("input", function () {
   
   contenedor.innerHTML ="";
   crearTarjetas(filtroNombre.pokemon);
+});
+
+
+
+const arrayTypes = [
+  "psychic",
+  "ground",
+  "water",
+  "fighting",
+  "normal",
+  "ghost",
+  "grass",
+  "poison",
+  "flying",
+  "dark",
+  "fairy",
+  "dragon",
+  "rock",
+  "steel",
+  "ice",
+  "electric",
+];
+const arrayTotalTypes =[];
+console.log(arrayTotalTypes)
+for (let i = 0; i < arrayTypes.length; i++) {
+  arrayTotalTypes.push({
+    type: arrayTypes[i],
+    total: filtrarTipos(pokemon, arrayTypes[i]).pokemon.length / 100,
+  });
+}
+
+
+const toggleTableBtn = document.getElementById("toggle-table-btn");
+const myTable = document.getElementById("my-table");
+
+toggleTableBtn.addEventListener("click", () => {
+  myTable.classList.toggle("hidden");
+ 
+
+  const table = document.getElementById("tablaDatos");
+  table.innerHTML = "";
+  for (let i = 0; i < arrayTotalTypes.length; i++) {
+    const row = document.createElement("tr");
+    const coldName = document.createElement("td");
+    coldName.textContent = arrayTotalTypes[i].type;
+    row.appendChild(coldName);
+    const colTotal = document.createElement("td");
+    colTotal.textContent = arrayTotalTypes[i].total;
+    row.appendChild(colTotal);
+
+    table.appendChild(row);
+  }
 });
