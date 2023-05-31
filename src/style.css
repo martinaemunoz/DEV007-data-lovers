@@ -286,7 +286,7 @@ th {
 #my-table {
   width: 50%;
   border-style: double;
-  border-color: #203079;
+  border-color: #4757b0;
   background: url(../src/img/fondo_tarjeta.png);
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
@@ -360,81 +360,3 @@ th {
   }
 
 }
-  /*.contenedor {
-    gap: 2%;
-    padding: 10px;
-  }
-  
-  .front,
-.back {
-  width: 40vh;
-  margin-right: 40px;
-  height: 30vh;
-}
-
-.front h2 {
-  font-size: 12px;
-}
-.despliegue {
-position: relative;
-display: inline-block;
-  
-}
-.despliegue-contenido{
-  position: absolute;
-  min-width: 100px;
-  z-index: 1;
-  
-}
-
-.despliegue-contenido a {
-  margin: 5px;
-  padding: 3px;
-  text-decoration-line: none;
-  display: inline block;
-}
-.front img {
-  width: 15vh;
-}
-
-.back.tarjeta {
-  font-size: 9px;
-  line-height: 1.8;
-}
-.btn-filter {
-  background-color: #586CDD;
-  font-family: 'Press Start 2P';
-  color: white;
-  padding: 15px;
-  font-size: 80%;
-  
-}
-
-.botones {
-  display: flex;
-  flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    
-    flex-wrap: wrap;
-    font-size: 70%;
-    width: 100%;
-    z-index: 1;
-}
-
-.img-title {
-  display: flex;
-  justify-content: center;
-  
-}
-.buscar {
-  width: 30vw;
-    display: flex;
-    font-size: 5%;
-    border-radius: 5px;
-    text-align: right;
-    justify-content: flex-end;
-    position: relative;
-}
-} 
-*/
