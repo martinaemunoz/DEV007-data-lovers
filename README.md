@@ -64,6 +64,7 @@ A partir del research definimos las siguientes historias de usuario, priorizando
 Yo, (usuario), Quiero (objetivo del usuario), Para (propósito de ese objetivo). Además definimos criterios de aceptación y definiciones de terminado por cada H.U, para ello utilizamos un tablero de [Trello](https://trello.com/b/zJZRZyhv/data-lovers-pokemon-go) donde organizamos cada sprint en torno a una H.U.
 
 #### **HU1**
+------------
 Yo, jugador frecuente de Pokemon Go.
 Quiero: Conocer los tipos de cada Pokemon.
 Para: Poder elegir el indicado para la batalla.
@@ -71,7 +72,7 @@ Para: Poder elegir el indicado para la batalla.
 ![image](https://github.com/martinaemunoz/DEV007-data-lovers/assets/52142059/0460e7f0-918a-4ccb-a40f-2bded3b6f1ae)
 
 ##### **HU2**
-    
+------------
 Yo, jugador frecuente de Pokemon Go.
 Quiero: Conocer stats de cada Pokemon.
 Para: Decidir mas rápido cuál elegir a la hora de jugar PvP (hp, cp, atk, def, etc)
@@ -79,6 +80,7 @@ Para: Decidir mas rápido cuál elegir a la hora de jugar PvP (hp, cp, atk, def,
 ![image](https://github.com/martinaemunoz/DEV007-data-lovers/assets/52142059/347fe594-fd23-49a7-8b30-5dbcfb0e0c8d)
 
 ##### **HU3**
+------------
 Yo, jugador frecuente de Pokemon Go.
 Quiero: Conocer estadísticas de un pokemon.
 Para: Complementar mi conocimiento acerca de las generaciones de Kanto y Johto.
@@ -108,6 +110,9 @@ En la parte de central de la página se visualizaría la lista de todos los Pok�
 
 ### c. Modificaciones basadas en test de usabilidad
 
+Dentro del feedback que recibimos acerca de nuestra interfaz a través de nuestras compañeras y coaches identificamos dos problemas principales.
+- El tamaño original de nuestro banner interfería con la experiencia de usuario, como originalmente quisimos que la barra de navegación se mantuviera decidimos reducir el tamaño del título y los botones.
+- La barra de búsqueda no se sentía muy visible debido a la posición que escogimos en el prototipo. Decidimos incluirla dentro de la barra de navegación para respetar su nivel de relevancia.
 
 ## 5. Interfaz finalizada
 
