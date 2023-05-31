@@ -1,4 +1,4 @@
-import { filtrarTipos, ordenarPokemon } from '../src/data.js';
+import { buscarPorNombre, filtrarTipos, ordenarPokemon } from '../src/data.js';
 
 const data = {
   pokemon: [
@@ -100,3 +100,13 @@ describe('buscarPorNombre', () => {
     expect(typeof buscarPorNombre(data.pokemon, "c")).toBe("object");
   })
 })
+describe('buscarPorNombre', () => {
+  test('Debería ser una función.', () => {
+    expect(typeof buscarPorNombre).toBe('function');
+  })
+
+  it('buscarPorNombre devuelve un objeto a partir de una letra.', () => {
+    expect(typeof buscarPorNombre(data.pokemon, "c")).toBe("object");
+  })
+})
+
