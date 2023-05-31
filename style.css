@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+font-family: "Press Start 2P";
+background-color: #A3B0FF; 
+width: 100vw;
+height: auto;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.banner {
+  position: sticky;
+  top: 0;
+  padding-bottom: 24px;
+  background: url(../src/img/fondopokemon.png) center center no-repeat;
+  background-size: cover;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100vw;
+}
+
+.bloque-img{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.img-title {
+  display: flex;
+  width: 40%;
+  max-width: 300px;
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 32px;
+  margin-left: 20px;
+}
+
+.btn-filter {
+  background-color: #586CDD;
+  font-family: 'Press Start 2P';
+  color: white;
+  padding: 20px;
+  font-size: 12px;
+  margin-left: 0%;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: 1px solid black;
+  
+}
+#toggle-table-btn {
+
+  background-color: #586CDD;
+  font-family: 'Press Start 2P';
+  color: white;
+  padding: 20px;
+  font-size: 12px;
+  margin-left: 0%;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: 1px solid black;
+  
+
+}
+
+.despliegue {
+  position: relative;
+  display: inline-block;
+}
+
+.despliegue-botones{
+  width: 70%;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+  column-gap: 180px;
+  margin-right: 50px;
+  
+}
+
+.despliegue-contenido {
+  display: none;
+  position: absolute;
+  background-color: #F0DC24;
+  min-width: 160px;
+  
+}
+.despliegue-contenido a {
+  margin: 5px;
+  padding: 3px;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.despliegue-contenido a:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.despliegue:hover .despliegue-contenido {
+  display: block;
+  position: absolute;
+  top: 100%;
+  border-radius: 15px;
+  background-color: #4757b0;
+  column-count: 2;
+}
+
+.despliegue:hover .btn-filter {
+  background-color: #F0DC24 ;
+  color: black;
+}
+
+.menu-tipos {
+  list-style: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:focus-within {
+  color: goldenrod;
+  font-weight: bold;
+}
+
+
+.botones {
+  display: flex;
+  
+  flex-direction: row;
+ 
+}
+
+.buscar-botones{
+  display: flex;
+  width: 30%;
+  padding: 10px;
+  align-items: start;
+}
+
+.buscar{
+  width: 60%;
+  align-items:end;
+  
+
+}
+
+.buscar input[type="text"] {
+  font-family: "Press Start 2P";
+  width: 100%;
+  display: flex;
+  font-size: 10px;
+  padding: 7px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: none;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+  gap: 8%;
+  z-index: 0;
+  row-gap: 40px;
+  
+}
+.front,
+.back {
+  border-width: 10px;
+  padding: 10px;
+  border: 3px solid #F0DC24;
+  margin: 30px 20px;
+  border-radius: 20px;
+  gap: 16px;
+  text-align: center;
+  align-items: center;
+  margin-right: 30px;
+  height: 40vh;
+  background: url(../src/img/fondo_tarjeta.png);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.front h2 {
+  margin: 5px;
+  text-align: center;
+  font-size: 15px;
+  color: #230c2e;
+}
+
+.front img {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+  
+.card div {
+  display: flex;
+  backface-visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.1, 0.22, 0.8, 1.13);
+}
+
+.card .front {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  transform: perspective(200px) rotateY(0deg);
+}
+
+.card .back {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: perspective(200px) rotateY(180deg);
+}
+
+.card:hover .front {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.front.tarjeta {
+  position: absolute;
+}
+.back.tarjeta{
+  font-size: 11px;
+  text-align: center;
+  line-height: 2.2;
+  background: url(../src/img/fondo_amarillo.png);
+ 
+}
+.card:hover .back {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: perspective(100px) rotateY(360deg);
+}
+.about {
+  max-width: 100%;
+  text-align: justify;
+  padding: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+th,
+td {
+  padding: 3px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #586CDD;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.my-chart {
+  display: none;
+  width: 50%;
+  height: 40%;
+}
+.contenido {
+  align-content: center;
+  margin: 15px;
+}
+
+#my-table {
+  width: 50%;
+  border-style: double;
+  border-color: #203079;
+  background: url(../src/img/fondo_tarjeta.png);
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+@media screen and (max-width:800px){
+  .banner {
+    width: 100vw;
+  }
+  #toggle-table-btn {
+    background-color: #586CDD;
+    color: white;
+    padding: 16px;
+    font-size: 50%;
+  }
+
+  .bloque-img{
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-title {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .botones{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .despliegue{
+    font-size: 10px;
+  }
+
+  .despliegue-botones{
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    margin-right: 0px;
+    justify-content: flex-start;
+    width: 60%;
+    
+  }
+
+  .btn-filter {
+  
+    color: white;
+    padding: 15px;
+    font-size: 10px;
+    margin-left: 0%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border: 1px solid black;
+  }
+
+  .buscar-botones{
+    padding: 0;
+    width: 40%;
+  }
+
+  .buscar {
+    font-size: 7px;
+    width: 70%;
+    margin-left: 20px;
+  }
+
+}
+  /*.contenedor {
+    gap: 2%;
+    padding: 10px;
+  }
+  
+  .front,
+.back {
+  width: 40vh;
+  margin-right: 40px;
+  height: 30vh;
+}
+
+.front h2 {
+  font-size: 12px;
+}
+.despliegue {
+position: relative;
+display: inline-block;
+  
+}
+.despliegue-contenido{
+  position: absolute;
+  min-width: 100px;
+  z-index: 1;
+  
+}
+
+.despliegue-contenido a {
+  margin: 5px;
+  padding: 3px;
+  text-decoration-line: none;
+  display: inline block;
+}
+.front img {
+  width: 15vh;
+}
+
+.back.tarjeta {
+  font-size: 9px;
+  line-height: 1.8;
+}
+.btn-filter {
+  background-color: #586CDD;
+  font-family: 'Press Start 2P';
+  color: white;
+  padding: 15px;
+  font-size: 80%;
+  
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    flex-wrap: wrap;
+    font-size: 70%;
+    width: 100%;
+    z-index: 1;
+}
+
+.img-title {
+  display: flex;
+  justify-content: center;
+  
+}
+.buscar {
+  width: 30vw;
+    display: flex;
+    font-size: 5%;
+    border-radius: 5px;
+    text-align: right;
+    justify-content: flex-end;
+    position: relative;
+}
+} 
+*/

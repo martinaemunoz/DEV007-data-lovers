@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="banner">
+      <div class="bloque-img">
+        <img class="img-title" src="../src/img/pokedex.png" alt=""/>
+      </div>
+      
+      <div class="botones">
+        <div class="despliegue-botones">
+          <button id="toggle-table-btn" class="Stats">estadísticas</button>
+          <div class="despliegue" id="menu-filtrar">
+            <button class="btn-filter" id="btn-filter" data-target="dropdown-content-filtrar">filtrar por tipo</button>
+            <div class="despliegue-contenido" id="despliegue-contenido-filtrar">
+              <div class="menu-tipos">
+                <li><a href="#" name="todos" class="tipoPokemon">Todos los tipos</a></li>
+                <li><a href="#" name="water" class="tipoPokemon">Agua</a></li>
+                <li><a href="#" name="fire" class="tipoPokemon">Fuego</a></li>
+                <li><a href="#" name="grass" class="tipoPokemon">Planta</a></li>
+                <li><a href="#" name="ground" class="tipoPokemon">Tierra</a></li>
+                <li><a href="#" name="rock" class="tipoPokemon">Roca</a></li>
+                <li><a href="#" name="steel" class="tipoPokemon">Metal</a></li>
+                <li><a href="#" name="ice" class="tipoPokemon">Hielo</a></li>
+                <li><a href="#" name="electric" class="tipoPokemon">Eléctrico</a></li>
+                <li><a href="#" name="dragon" class="tipoPokemon">Dragon</a></li>
+                <li><a href="#" name="ghost" class="tipoPokemon">Fantasma</a></li>
+                <li><a href="#" name="psychic" class="tipoPokemon">Psíquico</a></li>
+                <li><a href="#" name="normal" class="tipoPokemon">Normal</a></li>
+                <li><a href="#" name="fighting" class="tipoPokemon">Lucha</a></li>
+                <li><a href="#" name="poison" class="tipoPokemon">Veneno</a></li>
+                <li><a href="#" name="bug" class="tipoPokemon">Insecto</a></li>
+                <li><a href="#" name="flying" class="tipoPokemon">Volador</a></li>
+                <li><a href="#" name="dark" class="tipoPokemon">Oscuro</a></li>
+                <li><a href="#" name="fairy" class="tipoPokemon">Hada</a></li>
+              </div>
+            </div>
+          </div>
+          <div class="despliegue" id="menu-ordenar">
+            <button class="btn-filter" id="btn-ordenar" data-target="dropdown-content-ordenar">ordenar por nombre</button>
+            <div class="despliegue-contenido" id="despliegue-contenido-ordenar">
+              <a href="#" name="todos" class="Ordenar">Sin ordenar</a>
+              <a href="#" name="AZ" class="Ordenar">Orden de A-Z</a>
+              <a href="#" name="ZA" class="Ordenar">Orden de Z-A</a>
+            </div>
+          </div>
+        </div>
+        <div class="buscar-botones">
+          <div class="buscar" id="input-buscar">
+            <input type="text" id="inputBuscar" placeholder="Buscar por nombre..." required/>
+          </div>
+        </div>
+      </div>  
+    </header>
+    <main>
+      <div class="contenido">
+        <table id="my-table" class="hidden">
+          <thead>
+            <tr>
+              <th>TIPO</th>
+              <th>ESTADISTICA</th>
+            </tr>
+          </thead>
+          <tbody id="tablaDatos">
+          </tbody>
+        </table>
+        <canvas id="my-chart" class="my-chart"></canvas>
+      </div>
+      <h2 id="contenedor" class="contenedor"></h2>
+      </main>
+
+      <div id="root"></div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
