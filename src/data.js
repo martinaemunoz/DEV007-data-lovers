@@ -1,4 +1,4 @@
-// estas funciones es para filtar
+// esta función es para filtar
 
 export function filtrarTipos(data, tipo) {
   const dataFiltrada = data.filter((pokemon) =>
@@ -9,7 +9,7 @@ export function filtrarTipos(data, tipo) {
 }
 
 
-   // estas funciones es para ordenar
+// esta función es para ordenar
 export function ordenarPokemon(data, orden) {
   const copiedData = [...data.pokemon]; // Crear una copia del array original
 
@@ -22,7 +22,7 @@ export function ordenarPokemon(data, orden) {
   return copiedData;
 }
 
-// Esta función sirve buscar pokemones por su nombre 
+// Esta función sirve para buscar pokemon por su nombre 
 export function buscarPorNombre(data, nombreBuscar) {
   const withoutSpaces = nombreBuscar.trim();
   const dataFiltrada = data.filter((pokemon) => 

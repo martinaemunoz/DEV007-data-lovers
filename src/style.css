@@ -28,12 +28,11 @@ box-sizing: border-box;
 
 .img-title {
   display: flex;
-  width: 50%;
-  max-width: 400px;
+  width: 40%;
+  max-width: 300px;
   position: relative;
   padding-top: 12px;
   padding-bottom: 32px;
-  
   margin-left: 20px;
 }
 
@@ -266,7 +265,7 @@ td {
 }
 
 th {
-  background-color: #0075be;
+  background-color: #586CDD;
   color: white;
 }
 
